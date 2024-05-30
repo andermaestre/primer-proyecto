@@ -5,11 +5,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './hola-mundo.component.html',
   styleUrls: ['./hola-mundo.component.css']
 })
-export class HolaMundoComponent implements OnInit {
+export class HolaMundoComponent {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  titulo: string = 'Hola mundo!';
+  color: string = 'blue';
+  alumnos: string[] = [
+    "Mikel", "Juan", "Pedro", "Jose", "Maria"
+  ];
 }
