@@ -29,7 +29,12 @@ export class HolaMundoComponent {
     }
   }
 
-  AgregarElemento(alumno: string){
-    this.alumnos.push(alumno);
+  AgregarElemento(alumno: HTMLInputElement){
+    this.alumnos.push(alumno.value);
+    alumno.value = '';
+  }
+
+  Eliminar(alumno: string){
+    this.alumnos.splice(this.alumnos.indexOf(alumno), 1);
   }
 }

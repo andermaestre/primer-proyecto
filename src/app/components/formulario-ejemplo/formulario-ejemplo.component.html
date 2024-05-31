@@ -1,0 +1,15 @@
+<h1 class="jumbotron">Form</h1>
+<form [formGroup]="form" >
+    <label for="nombre">Nombre</label>
+    <input type="text" formControlName="nombre" id="nombre" />
+    <label for="apellido">Apellido</label>
+    <input type="text" formControlName="apellido" id="apellido">
+    <button (click)="submitForm()" class="btn btn-primary">Submit</button>
+
+    <button (click)="cambiarNombre()" class="btn btn-primary">Cambiar nombre</button>
+    <button (click)="limpiarFormulario()" class="btn btn-primary">Cambiar apellido</button>
+</form>
+
+
+
+
