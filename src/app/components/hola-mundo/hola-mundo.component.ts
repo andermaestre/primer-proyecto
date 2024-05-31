@@ -28,4 +28,8 @@ export class HolaMundoComponent {
       this.color2 = 'green';
     }
   }
+
+  AgregarElemento(alumno: string){
+    this.alumnos.push(alumno);
+  }
 }

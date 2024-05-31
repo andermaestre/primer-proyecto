@@ -4,7 +4,7 @@
         <div #div1 id="div1" class="col-6" [style]="'background-color:' + color1">
             <h2>Panel 1</h2>
         </div>
-        <div #div2 id="div2" class="col-6" [style]="'background-color:' + color2">
+        <div #div2 id="div2" class="col-6" [style.backgroundColor]="color2">
             <h2>Panel 2</h2>
         </div>
     </div>
@@ -14,6 +14,25 @@
     <button class="btn btn-secondary" (click)="Cambiar()">
         Boton Typescript
     </button>
+    <div [ngStyle]="{ padding : '3em' }">
+
+        <ul class="list-group">
+            <li class="list-group-item active">Mis alumnos</li>
+            <li class="list-group-item" *ngFor="let alumno of alumnos">
+            {{alumno}}
+            </li>
+            <li>
+                <div class="input-group">
+                    <input #nombre type="text" class="form-control" placeholder="Ingrese un nombre" />
+                    <button class="btn btn-outlet-primary" (click)="AgregarElemento(nombre.value)" >Agregar</button>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+    
+
+
 </div>
 
 <script>
