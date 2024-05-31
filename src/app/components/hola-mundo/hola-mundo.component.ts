@@ -7,9 +7,13 @@ import { Component } from '@angular/core';
 })
 export class HolaMundoComponent {
 
-  titulo: string = 'Hola mundo!';
-  color: string = 'blue';
-  alumnos: string[] = [
-    "Mikel", "Juan", "Pedro", "Jose", "Maria"
-  ];
+  titulo: string;
+  color: string;
+  alumnos: string[];
+  
+  constructor() { 
+    this.titulo = 'Primera seccion de prueba';
+    this.color = 'lightblue';
+    this.alumnos = ["Mikel", "Juan", "Pedro", "Jose", "Maria"]
+  }
 }
