@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Prueba de Angular';
-  color = 'blue';
+  color = 'lightblue';
 }

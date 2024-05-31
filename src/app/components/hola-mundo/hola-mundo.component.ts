@@ -8,12 +8,24 @@ import { Component } from '@angular/core';
 export class HolaMundoComponent {
 
   titulo: string;
-  color: string;
+  color1: string;
+  color2: string;
   alumnos: string[];
   
   constructor() { 
     this.titulo = 'Primera seccion de prueba';
-    this.color = 'lightblue';
+    this.color1 = 'red';
+    this.color2 = 'green';
     this.alumnos = ["Mikel", "Juan", "Pedro", "Jose", "Maria"]
+  }
+
+  Cambiar(){
+    if(this.color1 =='red'){
+      this.color1 = 'green';
+      this.color2 ='red';
+    }else{
+      this.color1 ='red';
+      this.color2 = 'green';
+    }
   }
 }

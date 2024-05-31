@@ -1,9 +1,30 @@
 <div class="container">
     <h1>{{titulo}}</h1> 
     <div class="row">
-        <div class="col-6"></div>
-        <div class="col-6"></div>
+        <div #div1 id="div1" class="col-6" [style]="'background-color:' + color1">
+            <h2>Panel 1</h2>
+        </div>
+        <div #div2 id="div2" class="col-6" [style]="'background-color:' + color2">
+            <h2>Panel 2</h2>
+        </div>
     </div>
-
+    <button class="btn btn-secondary" onclick="javascript:Cambiar()">
+        Boton javascript
+    </button>
+    <button class="btn btn-secondary" (click)="Cambiar()">
+        Boton Typescript
+    </button>
 </div>
+
+<script>
+    function Cambiar(){
+        if(document.getElementById('div1').style.backgroundColor =='red'){
+            document.getElementById('div1').style.backgroundColor = 'green';
+            document.getElementById('div2').style.backgroundColor ='red';
+        }else{
+            document.getElementById('div1').style.backgroundColor ='red';
+            document.getElementById('div2').style.backgroundColor = 'green';
+        }
+    }
+</script>
 
